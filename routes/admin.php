@@ -54,5 +54,19 @@ Route::group(
        // Permession make simple user
        Route::get('/admin/users/permessions/{user}/make-user' , 'backend\DashboardController@make_user')->name('dashboard.permessions.make-user');
 
+
+       // routes for categories listening
+       // this is a resource route for crud category
+       Route::resource('/categories' , 'backend\CategoriesController' );
+
+
+       // routes for areas listening
+       // this is a resource route for crud area
+       Route::resource('/areas' , 'backend\AreasController' );
+
+
+
+
+
 });
 
